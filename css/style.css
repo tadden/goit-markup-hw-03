@@ -10,9 +10,10 @@
   --main-bgr: #ffffff;
   --dark-bgr: #2f303a;
   --alt-bgr: #f5f4fa;
+  --header-border-clr: #ececec;
 
-  --main-font: 'Roboto', sans-serif;
-  --logo-font: 'Raleway', sans-serif;
+  --main-font: "Roboto", sans-serif;
+  --logo-font: "Raleway", sans-serif;
 }
 
 body {
@@ -20,6 +21,45 @@ body {
   background-color: var(--main-bgr);
   font-family: var(--main-font);
   font-size: 14px;
+}
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Фоны */
+
+.dark-bgr {
+  background-color: var(--dark-bgr);
+}
+.alt-bgr {
+  background-color: var(--alt-bgr);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .link {
@@ -31,12 +71,15 @@ body {
   color: var(--accent-clr);
 }
 .list {
+  margin: 0;
+  padding-left: 0;
   list-style: none;
 }
 
 /* Лого */
 
 .logo {
+  margin-right: 93px;
   color: var(--black-text);
   font-family: Raleway;
   font-weight: 700;
@@ -45,32 +88,64 @@ body {
   letter-spacing: 0.03em;
   text-decoration: none;
 }
-.footer-logo {
-  color: var(--white-text);
-}
 .accent {
   color: var(--accent-clr);
 }
 
-/* Навигация */
+/*  Меню - Навигации */
+
 .nav {
+  display: flex;
+  align-items: center;
+}
+.menu {
+  display: inline-flex;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-/* Контакты header/footer */
+.menu-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* Header */
+
+.container.contacts-list {
+  display: flex;
+}
+
+.page-header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--header-border-clr);
+}
+
+.page-header .container {
+  justify-content: space-between;
+  display: flex;
+}
+.page-header .mail {
+  margin-right: 50px;
+}
 
 .contacts {
+  display: flex;
+  align-items: center;
   color: var(--alt-text-clr);
 }
-.contacts-footer {
-  color: var(--address-clr);
+
+/* Секция Hero */
+
+.hero {
+  padding: 200px 0;
+  text-align: center;
 }
 
 /* Главный заголовок */
 
 .page-title {
+  margin-bottom: 30px;
   color: var(--white-text);
   font-weight: 900;
   font-size: 44px;
@@ -83,6 +158,9 @@ body {
 /* Кнопка */
 
 .btn {
+  padding: 10px 32px;
+  border: 1px solid transparent;
+  border-radius: 4px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -98,7 +176,9 @@ body {
 }
 
 /* Заголовки секций */
+
 .section-title {
+  margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
@@ -107,50 +187,101 @@ body {
 
 /* Особенности */
 
+.feature-section {
+  padding-top: 94px;
+}
+
+.feature-list {
+  display: flex;
+}
+.feature-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .feature-title {
+  margin-bottom: 10px;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 .feature-text {
+  width: 270px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--alt-text-clr);
-  width: 270px;
+}
+
+/* Чем мы занимаемся */
+
+.section {
+  padding: 94px 0;
+}
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-top: -30px;
+}
+.item {
+  margin-right: 30px;
+  margin-top: 30px;
 }
 
 /* Команда */
 
+.team-item {
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  flex-basis: calc((100% - 4 * 30px) / 4);
+  text-align: center;
+}
+
 .name {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
 .position {
+  padding-bottom: 30px;
+  margin-bottom: 0;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.03em;
   color: var(--alt-text-clr);
 }
+.img {
+  margin-bottom: 30px;
+}
 
 /* Подвал */
 
+.footer {
+  padding: 60px 0;
+}
+
+.footer-logo {
+  margin-right: 0;
+  color: var(--white-text);
+}
 .address {
+  margin-top: 20px;
   font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--white-text);
 }
 
-/* Фоны */
-
-.dark-bgr {
-  background-color: var(--dark-bgr);
+.address-item:not(:last-child) {
+  margin-bottom: 9px;
 }
-.alt-bgr {
-  background-color: var(--alt-bgr);
+
+.contacts-footer {
+  color: var(--address-clr);
 }
 
 /* Portfolio страница */
