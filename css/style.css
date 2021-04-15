@@ -1,0 +1,180 @@
+/* Переменные */
+:root {
+  --main-text-clr: #212121;
+  --alt-text-clr: #757575;
+  --accent-clr: #2196f3;
+  --white-text: #ffffff;
+  --black-text: #000000;
+  --address-clr: rgba(255, 255, 255, 0.6);
+
+  --main-bgr: #ffffff;
+  --dark-bgr: #2f303a;
+  --alt-bgr: #f5f4fa;
+
+  --main-font: 'Roboto', sans-serif;
+  --logo-font: 'Raleway', sans-serif;
+}
+
+body {
+  color: var(--main-text-clr);
+  background-color: var(--main-bgr);
+  font-family: var(--main-font);
+  font-size: 14px;
+}
+
+.link {
+  color: var(--main-text-clr);
+  text-decoration: none;
+}
+.link:hover,
+.link:focus {
+  color: var(--accent-clr);
+}
+.list {
+  list-style: none;
+}
+
+/* Лого */
+
+.logo {
+  color: var(--black-text);
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+.footer-logo {
+  color: var(--white-text);
+}
+.accent {
+  color: var(--accent-clr);
+}
+
+/* Навигация */
+.nav {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+/* Контакты header/footer */
+
+.contacts {
+  color: var(--alt-text-clr);
+}
+.contacts-footer {
+  color: var(--address-clr);
+}
+
+/* Главный заголовок */
+
+.page-title {
+  color: var(--white-text);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Кнопка */
+
+.btn {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--white-text);
+  background-color: var(--accent-clr);
+  cursor: pointer;
+}
+.btn:hover,
+.btn:focus {
+  /* В макете не указано */
+}
+
+/* Заголовки секций */
+.section-title {
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+/* Особенности */
+
+.feature-title {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.feature-text {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--alt-text-clr);
+  width: 270px;
+}
+
+/* Команда */
+
+.name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+.position {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: var(--alt-text-clr);
+}
+
+/* Подвал */
+
+.address {
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--white-text);
+}
+
+/* Фоны */
+
+.dark-bgr {
+  background-color: var(--dark-bgr);
+}
+.alt-bgr {
+  background-color: var(--alt-bgr);
+}
+
+/* Portfolio страница */
+
+.filter-btn {
+  color: var(--main-text-clr);
+  background-color: var(--alt-bgr);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+.filter-btn:hover,
+.filter-btn:focus {
+  color: var(--white-text);
+  background-color: var(--accent-clr);
+}
+.brand-title {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.filter {
+  line-height: 1.87;
+}
