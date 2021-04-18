@@ -127,13 +127,12 @@ p {
   justify-content: space-between;
   display: flex;
 }
-.page-header .mail {
-  margin-right: 50px;
-}
 
 .contacts {
   display: flex;
   align-items: center;
+}
+.contacts-header {
   color: var(--alt-text-clr);
 }
 
@@ -223,12 +222,12 @@ p {
 .card-set {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
+  margin-left: -30px;
   margin-top: -30px;
 }
 .item {
   flex-basis: calc((100% - 3 * 30px) / 3);
-  margin-right: 30px;
+  margin-left: 30px;
   margin-top: 30px;
 }
 
@@ -319,7 +318,7 @@ p {
 
 .card-item {
   flex-basis: calc((100% - 3 * 30px) / 3);
-  margin-right: 30px;
+  margin-left: 30px;
   margin-top: 30px;
   background: var(--white-text);
   border: 1px solid #eeeeee;
